@@ -1,0 +1,187 @@
+openapi: 3.0.0
+info:
+  title: Devl_Send_Modernaization_DAST Copy
+  version: 1.0.0
+servers:
+  - url: https://ets-devl.10322.elluciancloud.com
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+paths:
+  /99949900/qapi/students:
+    post:
+      tags:
+        - default
+      summary: Find Student Colleague
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                dateOfBirth: 1993/09/09
+                firstName: Raju
+                formerLastName: ''
+                lastName: Karthik
+                unverifiedStudentId: ''
+                governmentId: ''
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /99949900/api/students/0005345/programs:
+    get:
+      tags:
+        - default
+      summary: Find Program Colleague
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/version:
+    get:
+      tags:
+        - default
+      summary: version
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /99949900/api/students/0005345/transcript-restrictions:
+    get:
+      tags:
+        - default
+      summary: Find Restriction
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /99949900/api/system-details/status:
+    get:
+      tags:
+        - default
+      summary: System Status Colleague
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /99949900/api/transcript-orders:
+    post:
+      tags:
+        - default
+      summary: Create Order Colleague
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              example: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ns2:TranscriptRequest xmlns:ns2=\"urn:org:pesc:message:TranscriptRequest:v1.2.0\" xmlns:ns3=\"urn:org:pesc:core:CoreMain:v1.12.0\">\r\n<ns2:TransmissionData>\r\n        <DocumentID>TO5776_A_200703080930</DocumentID>\r\n        <CreatedDateTime>2007-03-08T09:30:15-05:00</CreatedDateTime>\r\n        <DocumentTypeCode>Request</DocumentTypeCode>\r\n        <TransmissionType>Original</TransmissionType>\r\n        <Source>\r\n            <Organization>\r\n                <DUNS>827034414</DUNS>\r\n                <OrganizationName>National Student Clearinghouse</OrganizationName>\r\n            </Organization>\r\n        </Source>\r\n        <Destination>\r\n            <Organization>\r\n                <OPEID>99949900</OPEID>\r\n                <OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>\r\n            </Organization>\r\n        </Destination>\r\n        <DocumentProcessCode>PRODUCTION</DocumentProcessCode>\r\n        <RequestTrackingID>FFOrd60</RequestTrackingID>\r\n    </ns2:TransmissionData>\r\n    <ns2:Request>\r\n        <CreatedDateTime>2007-02-28T10:21:00-05:00</CreatedDateTime>\r\n        <Requestor>\r\n            <Person>\r\n                <SSN>12345677878</SSN>\r\n                <Birth>\r\n                    <BirthDate>1993-09-09</BirthDate>\r\n                </Birth>\r\n                <Name>\r\n                    <FirstName>Defect</FirstName>\r\n                    <MiddleName></MiddleName>\r\n                    <LastName>Karthikag</LastName>\r\n                </Name>\r\n                <Contacts>\r\n                    <Address>\r\n                        <AddressLine>329 Kenbrook Dr</AddressLine>\r\n                        <City>Galax</City>\r\n                        <StateProvinceCode>VA</StateProvinceCode>\r\n                        <PostalCode>24333</PostalCode>\r\n                    </Address>\r\n                    <Phone>\r\n                        <AreaCityCode>276</AreaCityCode>\r\n                        <PhoneNumber>4439012</PhoneNumber>\r\n                    </Phone>\r\n                    <Email>\r\n                        <EmailAddress>sowmya.bm@ellucian.com</EmailAddress>\r\n                    </Email>\r\n                </Contacts>\r\n            </Person>\r\n        </Requestor>\r\n        <RequestedStudent>\r\n            <Person>\r\n                <SchoolAssignedPersonID>0024781</SchoolAssignedPersonID>\r\n                <SSN>1234567</SSN>\r\n                <Birth>\r\n                    <BirthDate>1993-09-09</BirthDate>\r\n                </Birth>\r\n                <Name>\r\n                    <FirstName>Defect</FirstName>\r\n                    <MiddleName></MiddleName>\r\n                    <LastName>Karthikag</LastName>\r\n                </Name>\r\n                <AlternateName>\r\n                    <FirstName></FirstName>\r\n                    <MiddleName></MiddleName>\r\n                    <LastName></LastName>\r\n                </AlternateName>\r\n                <Contacts>\r\n                    <Address>\r\n                        <AddressLine>329 Kenbrook Dr</AddressLine>\r\n                        <City>Galax</City>\r\n                        <StateProvinceCode>VA</StateProvinceCode>\r\n                        <PostalCode>24333</PostalCode>\r\n                    </Address>\r\n                    <Phone>\r\n                        <AreaCityCode>276</AreaCityCode>\r\n                        <PhoneNumber>4439012</PhoneNumber>\r\n                    </Phone>\r\n                    <Email>\r\n                        <EmailAddress>sowmya.bm@ellucian.com</EmailAddress>\r\n                    </Email>\r\n                </Contacts>\r\n            </Person>\r\n            <Attendance>\r\n                <School>\r\n                    <OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>\r\n                    <OPEID>99949900</OPEID>\r\n                </School>\r\n                <EnrollDate>1990-01-01</EnrollDate>\r\n                <ExitDate>1995-12-31</ExitDate>\r\n                <AcademicAwardsReported>\r\n                    <AcademicAwardTitle>B.A. Arts</AcademicAwardTitle>\r\n                    <AcademicAwardDate>1995-01-01</AcademicAwardDate>\r\n                </AcademicAwardsReported>\r\n            </Attendance>\r\n            <ReleaseAuthorizedIndicator>true</ReleaseAuthorizedIndicator>\r\n            <ReleaseAuthorizedMethod>Signature</ReleaseAuthorizedMethod>\r\n        </RequestedStudent>\r\n        <Recipient>\r\n            <Receiver>\r\n                <RequestorReceiverOrganization>\r\n                    <OrganizationName>HOMETOWN COMMUNITY COLLEGE</OrganizationName>\r\n                    <Contacts>\r\n                        <Address>\r\n                            <AddressLine>P.O. BOX 31127</AddressLine>\r\n                            <City>ANYTOWN</City>\r\n                            <StateProvinceCode>VA</StateProvinceCode>\r\n                            <PostalCode>20171</PostalCode>\r\n                            <AttentionLine>HCC TRANSCRIPT OFFICE</AttentionLine>\r\n                        </Address>\r\n                        <Phone>\r\n                            <AreaCityCode>703</AreaCityCode>\r\n                            <PhoneNumber>5551212</PhoneNumber>\r\n                        </Phone>\r\n                        <FaxPhone>\r\n                            <AreaCityCode>703</AreaCityCode>\r\n                            <PhoneNumber>9991212</PhoneNumber>\r\n                        </FaxPhone>\r\n                    </Contacts>\r\n                </RequestorReceiverOrganization>\r\n            </Receiver>\r\n            <TranscriptType>Complete</TranscriptType>\r\n            <TranscriptPurpose>Admission</TranscriptPurpose>\r\n            <DeliveryMethod>Electronic</DeliveryMethod>\r\n            <ElectronicDelivery>\r\n                <ElectronicFormat>PDF</ElectronicFormat>\r\n                <ElectronicMethod>ServiceProvider</ElectronicMethod>\r\n            </ElectronicDelivery>\r\n            <TranscriptCopies>1</TranscriptCopies>\r\n            <DeliveryInstruction>UG|This is a DeliveryInstruction element with an overloaded transcript grouping in it for colleague</DeliveryInstruction>\t\t\t \r\n        </Recipient>\r\n    </ns2:Request>\r\n    <ns2:UserDefinedExtensions>\r\n        <HoldForProgramId>ACCT.AS</HoldForProgramId>\r\n        <AttachmentURL>www.test.org</AttachmentURL>\r\n        <AttachmentFlag>False</AttachmentFlag>\r\n        <AttachmentSpecialInstructions></AttachmentSpecialInstructions>\r\n    </ns2:UserDefinedExtensions>\r\n</ns2:TranscriptRequest>"
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/xml
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/xml
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /99949900/api/transcript-orders/FFOr59:
+    post:
+      tags:
+        - default
+      summary: Update Order Colleague
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              example: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<ns2:TranscriptResponse\r\n\txmlns:ns2=\"urn:org:pesc:message:TranscriptResponse:v1.2.0\"\r\n\txmlns:ns3=\"urn:org:pesc:core:CoreMain:v1.12.0\">\r\n\t<ns2:TransmissionData>\r\n\t\t<DocumentID>TO5776_A_200703080930</DocumentID>\r\n\t\t<CreatedDateTime>2018-02-08T00:23:00.000+00:00</CreatedDateTime>\r\n\t\t<DocumentTypeCode>Request</DocumentTypeCode>\r\n\t\t<TransmissionType>Original</TransmissionType>\r\n\t\t<Source>\r\n\t\t\t<Organization>\r\n\t\t\t\t<OPEID>99949900</OPEID>\r\n\t\t\t\t<OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>\r\n\t\t\t</Organization>\r\n\t\t</Source>\r\n\t\t<Destination>\r\n\t\t\t<Organization>\r\n\t\t\t\t<DUNS>827034414</DUNS>\r\n\t\t\t\t<OrganizationName>National Student Clearinghouse</OrganizationName>\r\n\t\t\t</Organization>\r\n\t\t</Destination>\r\n\t\t<DocumentProcessCode>PRODUCTION</DocumentProcessCode>\r\n\t</ns2:TransmissionData>\r\n\t<ns2:Response>\r\n\t\t<CreatedDateTime>2019-02-03T00:23:00.000+00:00</CreatedDateTime>\r\n\t\t<RequestTrackingID>FFOr59</RequestTrackingID>\r\n\t\t<ResponseStatus>RG</ResponseStatus>\r\n\t\t<RequestedStudent>\r\n\t\t\t<Person>\r\n\t\t\t\t<Name>\r\n\t\t\t\t\t<FirstName>sowmyab</FirstName>\r\n\t\t\t\t\t<LastName>Grade</LastName>\r\n\t\t\t\t</Name>\r\n\t\t\t</Person>\r\n\t\t\t<Attendance>\r\n\t\t\t\t<School>\r\n\t\t\t\t\t<OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>\r\n\t\t\t\t\t<OPEID>99949900</OPEID>\r\n\t\t\t\t</School>\r\n\t\t\t\t<CurrentEnrollmentIndicator>False</CurrentEnrollmentIndicator>\r\n\t\t\t</Attendance>\r\n\t\t\t<UpdateContactsInformation>True</UpdateContactsInformation>\r\n\t\t</RequestedStudent>\r\n\t\t<DeliveryMethod>Electronic</DeliveryMethod>\r\n\t\t<UserDefinedExtensions>\r\n\t\t\t<ErpStatusInfo>\r\n\t\t\t\t<UpdateThirdParty>True</UpdateThirdParty>\r\n\t\t\t\t<UpdateCloudStatus>True</UpdateCloudStatus>\r\n\t\t\t\t<StatusDateTime>2020-05-11T09:57:38.000+00:00</StatusDateTime>\r\n\t\t\t\t<StatusCode>FF</StatusCode>\r\n\t\t\t\t<PlannedReleaseDate>2022-03-18</PlannedReleaseDate>\r\n\t\t\t</ErpStatusInfo>\r\n\t\t</UserDefinedExtensions>\r\n\t</ns2:Response>\r\n</ns2:TranscriptResponse>"
+      security:
+        - basicAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/xml
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
